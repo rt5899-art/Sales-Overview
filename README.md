@@ -2,7 +2,7 @@
 
 An enterprise-grade Power BI Desktop solution designed to deliver end-to-end sales performance tracking, product profitability diagnostics, customer segmentation analysis, and interactive "What-If" scenario planning.
 
-## 🚀 Key Features
+##  Key Features
 
 * **Executive KPI Tracking:** Instant visibility into global revenue streams, order fulfillment pipelines, and item return distributions.
 * **Dynamic Measures & Dimensions (Field Parameters):** Advanced toggle switches allowing users to dynamically change report visuals between different analytical dimensions and core business metrics.
@@ -12,7 +12,7 @@ An enterprise-grade Power BI Desktop solution designed to deliver end-to-end sal
 
 ---
 
-## 📊 Dashboard Architecture
+##  Dashboard Architecture
 
 The report contains specialized reporting surfaces and underlying configuration layouts:
 
@@ -37,7 +37,7 @@ Deep dive into product metrics, catalog positioning, and associated customer dem
 
 ---
 
-## 🧮 Data Model & Formulas
+##  Data Model & Formulas
 
 The dashboard relies on a star/snowflake schema variant containing core dimensions and transaction facts linked together. 
 
@@ -64,7 +64,7 @@ The core business KPIs are governed by standard financial definitions modeled in
 
 ---
 
-## 🛠️ Setup and Installation
+##  Setup and Installation
 
 To explore or modify this dashboard locally:
 
@@ -72,3 +72,6 @@ To explore or modify this dashboard locally:
 2. **Clone the Repository:**
    ```bash
    git clone [https://github.com/rt5899-art/Sales-Overview.git](https://github.com/rt5899-art/Sales-Overview.git)# Sales-Overview
+
+  ##  Author
+   rt5899-art
