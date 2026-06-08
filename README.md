@@ -103,26 +103,25 @@ The report contains some field and table name inconsistencies observed in the da
 
 ## Findings and Insights
 
-**Sales performance against targets**
-The KPI page and Overview page together allow quick identification of months where sales fall below prior year benchmarks, making it easy for management to spot seasonal underperformance and act before quarter-end.
+The dashboard shows that sales performance can be understood better when metrics are separated by product category, region, and time period. This makes it easier to spot trends that are not visible in raw tables.
 
-**Customer segmentation patterns**
-The breakdown of sales by gender, marital status, and parental status on the Product Overview page reveals which customer segments contribute disproportionately to revenue. These dimensions can inform targeted marketing and product stocking decisions.
+!![image alt](https://github.com/rt5899-art/Sales-Overview/blob/main/ss-Sales%20overview.png?raw=true)
+Total sales are 24.91M, which shows the dashboard is tracking a high-value sales stream and gives a strong top-line view of performance.
 
-**Subcategory revenue concentration**
-The bar charts on the Overview and Page 3 surfaces suggest that a small number of subcategories likely account for the majority of total sales, a pattern consistent with retail Pareto distributions. The customer status series overlay helps identify whether premium or standard customer tiers are driving those top subcategories.
+Total order count is 25.16K, indicating consistent transaction volume across the selected period.
 
-**Geographic concentration**
-The Azure Maps visuals on the Overview and Map pages allow visual identification of high-revenue geographies at the continent, country, and regional level. This supports decisions about where to invest in logistics, marketing spend, or expansion.
+Return quantity is 1,828, and the return rate is 7.26%, which suggests returns are a meaningful part of the business and should be monitored closely.
 
-**Return rate as a quality signal**
-The return quantity card and percentage return measure on the Overview page provide an at-a-glance check on product or fulfilment quality. Filtering by subcategory or region can help isolate whether returns are concentrated in specific products or geographies.
+The monthly line chart shows sales fluctuating around the 1M–3M range with a visible spike around March 2017, which points to a short-term surge in demand or a campaign-driven peak.
 
-**Price sensitivity**
-The Price Adjustment % slicer on the Overview page, combined with the adjusted price line chart, enables scenario-style analysis of how pricing changes affect overall sales volume, giving commercial teams a tool for quick what-if exploration.
+The sub-category chart shows Road Bikes as the strongest performer, with the largest sales contribution compared to other categories such as Mountain Bikes and Touring Bikes.
 
-**Seasonal and monthly trends**
-The line, area, pivot, and ribbon charts across multiple pages consistently support monthly and yearly trend analysis. The prior month sales comparison table on the KPI page is particularly useful for identifying momentum shifts at a granular level.
+The continent map shows sales concentration across a few major regions, indicating that geography plays an important role in revenue distribution.
+
+The “Jun 2017 Sales” KPI shows 1.83M against a goal of 533.82K, which means this period significantly exceeded target and reflects strong monthly performance.
+
+The “Jun-2017 Order” KPI shows 2,146 against a goal of 2,165, which is slightly below target and suggests that sales value improved even though order volume remained just under goal.
+
 
 ---
 
@@ -130,7 +129,7 @@ The line, area, pivot, and ribbon charts across multiple pages consistently supp
 
 1. **Standardize naming conventions** across all tables, columns, and pages. Correct typos such as "Adjusted Prce," "DAte," and "Produt Overview" to improve readability and reduce confusion for future developers.
 
-2. **Document all DAX measures** with inline comments or a measure description field, particularly for KPI title measures (rderkpi title, salekpi titles) and the dynamic selector parameters whose logic may not be self-evident.
+2. **Document all DAX measures** with inline comments or a measure description field, particularly for KPI title measures (orderkpi title, salekpi titles) and the dynamic selector parameters whose logic may not be self-evident.
 
 3. **Add row-level security (RLS)** if the report is to be distributed to regional managers or external stakeholders, scoping their view to relevant territories or customer segments.
 
