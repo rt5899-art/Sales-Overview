@@ -42,7 +42,7 @@ Isolate Product Returns Leakage Insight ➔ Return quantities are currently dist
 
 * Action ➔ Build a localized Returns Analysis matrix to cross-reference product subcategory defects against regional distributor performance to reduce overhead margins.
 
-Cleanse Navigation and Reporting Layouts Insight ➔ The reporting structure relies on unmapped sheet layout names (e.g., "Page 1" and "Page 3") which hampers non-technical stakeholder use.
+Cleanse Navigation and Reporting Layouts Insight ➔ The reporting structure relies on unmapped sheet layout names which hampers non-technical stakeholder use.
 
 * Action ➔ Standardize workspace tabs into descriptive, business-centric titles such as Category Performance Matrix or Executive Demographic Breakdown.
 
