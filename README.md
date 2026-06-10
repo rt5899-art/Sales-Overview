@@ -1,4 +1,4 @@
-## Retail Sales Performance and Executive Overview 
+## Retail Sales Performance And Executive Overview 
 
 An interactive, multi-page Power BI analytics dashboard designed to consolidate customer demographics, transaction logs, returns, and regional territories into an actionable business intelligence engine.
 
