@@ -1,142 +1,51 @@
-# Retail Sales Revision – Power BI Dashboard
+## Retail Sales Performance and Executive Overview 
 
-## Project Overview
+An interactive, multi-page Power BI analytics dashboard designed to consolidate customer demographics, transaction logs, returns, and regional territories into an actionable business intelligence engine.
 
-This Power BI project is a multi-page interactive sales analytics dashboard built for a retail business. It consolidates data from customers, products, territories, and sales transactions into a single report that enables stakeholders to monitor revenue performance, product trends, return rates, and regional distribution. The report is structured around nine pages, each serving a distinct analytical purpose — from a high-level executive overview down to granular product, customer, and time-series analysis.
+### Project Overview
 
-The report is designed for business users who need quick, filterable insights without requiring technical knowledge. It uses slicers, dynamic measures, KPIs, maps, and tooltip pages to deliver a seamless self-service analytics experience.
+This project transforms fragmented operational data spreadsheets into a unified, relational data model. Spanning across specialized reporting pages, it tracks top-line retail KPIs, monitors product category velocity, analyzes product return rates, and evaluates customer profiling to optimize gross revenue streams.
 
----
+### Tools & Technologies
 
-## Data Model
+Data BI Platform: Microsoft Power BI Desktop
 
-The report connects several core tables:
+Data Transformation: Power Query / M Language
 
-- **Final_Sales** — transactional sales records including order numbers, sales amounts, and stock dates
-- **Customers Table** — customer attributes including name, gender, marital status, parental status, annual income, and email address
-- **Products** — product details including name, price, cost, color, and a computed order count
-- **Product Categories / Product Subcategories** — hierarchical classification of products
-- **Territories** — geographic dimensions: continent, country, region, city, and state
-- **CALENDAR / DAte** — date table supporting time intelligence (year, month, hierarchy)
-- **Returns** — return transaction data with quantities
-- **Map** — dedicated table supporting geographic map visuals
-- **Measure Table** — a dedicated DAX measure table containing calculated KPIs
-- **Measure Selector 2 / Dimensions 2** — field parameter tables enabling dynamic measure and dimension switching
+Modeling & Analytics: DAX (Data Analysis Expressions) for time-intelligence, field parameters, and calculated metrics
 
----
+Geographic Visualization: Azure Maps API integration
 
-## Report Pages
-
-**Page 1 (Data Table)**
-A summary table showing total sales and maximum sales grouped by product category, sourced from a summarized intermediate dataset.
-
-**Overview**
-The primary executive dashboard. Displays total sales, order count, return quantity, and percentage returns as cards. Includes a bar chart of sales by product subcategory broken down by customer status, a line chart comparing actual versus adjusted sales over time, a KPI visual tracking current sales against prior year targets and prior month orders, a geographic Azure Map showing sales by continent and country, and multiple slicers for category, gender, region, date, price adjustment, and dynamic measure/dimension selection.
-
-**Product Overview**
-Focuses on product and customer demographics. Shows product price, product cost, and product name as card visuals. A customer table displays names, emails, gender, parental status, and sales. A ribbon chart breaks total sales by country over yearly and monthly hierarchies. Two donut charts show total sales split by marital status and parental status.
-
-**Tool Tip**
-A tooltip page that surfaces on hover in other visuals. Displays subcategory name, total sales, average annual income, and a bar chart of sales split by gender.
-
-**Page 3 (Bar Chart Analysis)**
-Three comparative bar charts: a clustered bar chart showing yearly sales by customer status, a grouped bar chart showing subcategory sales by customer status, and a 100% stacked bar chart showing yearly sales proportions by customer status.
-
-**Page 4 – Line and Area**
-Time-series visuals: an area chart overlaying total sales with a product order count metric, and a line chart of sales over time. Accompanied by a detailed table showing product name, sales, order number, returns, and year, plus a pivot table breaking sales and order count by product category and year.
-
-**KPI**
-A dedicated KPI monitoring page. Three KPI visuals track sales against prior year targets and monthly trends. A card shows total sales. A column chart displays sales by date. A monthly comparison table shows current versus prior month sales. A fourth KPI tracks the prior month sales measure independently.
-
-**Map**
-A standalone Azure Map page visualizing sales volume by country, state, and city, with bubble sizing driven by sales amounts and color series by individual sales values.
-
-**Ribbon**
-A ribbon chart tracking total sales by product color over yearly and monthly hierarchies, and a pie chart showing sales and customer status counts broken down by country and customer status.
-
----
-
-## Tools and Technologies Used
-
-- **Microsoft Power BI Desktop** — report authoring, data modelling, and visualization
-- **DAX (Data Analysis Expressions)** — calculated measures including total sales, percentage returns, adjusted price, previous year sales, previous month sales, order count, and dynamic KPI titles
-- **Power Query (M Language)** — assumed data transformation and shaping during import
-- **Azure Maps** — geographic visualization of sales by region, country, and city
-- **Field Parameters** — dynamic measure and dimension switching via slicer-driven parameters (Measure Selector, Dimensions)
-- **Power BI Themes** — CY24SU10 base theme applied for consistent visual styling
-- **Enhanced Tooltips** — custom tooltip page for richer hover-state information on charts
-
----
-
-## Requirements
-
-To open and use this report:
-
-- Microsoft Power BI Desktop (version compatible with report version 5.68 / CY24SU10 theme, approximately late 2024 release or later)
-- Access to the underlying data sources that were used during development (the `.pbix` file contains a cached DataModel, so visuals will render with embedded data, but refreshing requires reconnecting to the original sources)
-- An Azure Maps API subscription or organizational Power BI license that enables Azure Maps visuals
-- A Power BI Pro or Premium license if the report is to be published and shared via the Power BI Service
-
----
-
-## Challenges Faced
-
-**Data model complexity**
-Connecting sales, returns, customers, products, territories, and a separate calendar table requires careful relationship management to avoid ambiguous filter paths and incorrect aggregations, especially for time intelligence measures like previous year and previous month comparisons.
-
-**Dynamic measure switching**
-Implementing field parameters (Measure Selector and Dimensions) so that a single slicer drives which measure or dimension is shown across visuals adds report interactivity but requires careful DAX scaffolding and testing to ensure all visuals respond correctly.
-
-**Return and adjustment metrics**
-Calculating percentage returns and adjusted prices accurately across different filter contexts — particularly when both a Returns table and a Final_Sales table are involved — requires handling blank values and division-by-zero cases in DAX.
-
-**Tooltip page configuration**
-Setting up a dedicated tooltip page that triggers correctly on hover across multiple visuals, while maintaining consistent filter context and preventing tooltip slicers from affecting the main report pages, requires deliberate page-level configuration.
-
-**Geographic mapping**
-Azure Maps visuals require clean, standardized geographic data. Any inconsistencies in country names, region labels, or missing city/state values can cause incorrect pin placement or missing data points on the map.
-
-**Typographical and naming inconsistencies**
-The report contains some field and table name inconsistencies observed in the data model (for example, "Adjusted Prce" missing a letter, "DAte" as a table name, "Produt Overview" as a page name). These reflect iterative development and should be standardized in a future revision for maintainability.
-
----
-
-## Findings and Insights
-
-The dashboard shows that sales performance can be understood better when metrics are separated by product category, region, and time period. This makes it easier to spot trends that are not visible in raw tables.
+#### Dashboard Preview
 
 !![image alt](https://github.com/rt5899-art/Sales-Overview/blob/main/ss-Sales%20overview.png?raw=true)
-Total sales are 24.91M, which shows the dashboard is tracking a high-value sales stream and gives a strong top-line view of performance.
 
-Total order count is 25.16K, indicating consistent transaction volume across the selected period.
+### Key Business Insights
 
-Return quantity is 1,828, and the return rate is 7.26%, which suggests returns are a meaningful part of the business and should be monitored closely.
+* Top-Line Performance: The platform captures a total gross sales engine of 24.91M in global revenue.
 
-The monthly line chart shows sales fluctuating around the 1M–3M range with a visible spike around March 2017, which points to a short-term surge in demand or a campaign-driven peak.
+* Transaction Velocity: Total cumulative traffic reaches an order count of 25.16K individual sales records.
 
-The sub-category chart shows Road Bikes as the strongest performer, with the largest sales contribution compared to other categories such as Mountain Bikes and Touring Bikes.
+* Return Rate Balance: System metrics monitor product return quantities and percentage return thresholds to maintain baseline inventory safety flags.
 
-The continent map shows sales concentration across a few major regions, indicating that geography plays an important role in revenue distribution.
+* Product Concentration: Revenue distributions show strong variances across primary product subcategories, driven cleanly by differing customer segments and statuses.
 
-The “Jun 2017 Sales” KPI shows 1.83M against a goal of 533.82K, which means this period significantly exceeded target and reflects strong monthly performance.
+* Demographic Triggers: Cross-filtering sales variables against marital status, parental status, and household annual income values isolates high-value customer personas.
 
-The “Jun-2017 Order” KPI shows 2,146 against a goal of 2,165, which is slightly below target and suggests that sales value improved even though order volume remained just under goal.
+### Strategic Recommendations
 
+Address Data Infrastructure Deficiencies Insight ➔ The foundational model shows iterative column and table spelling mismatches (such as missing characters in price variables and mixed case names like "DAte").
 
----
+* Action ➔ Implement strict data cataloging rules and refactor table properties within Power Query to ensure system maintainability as the transactional pipeline grows.
 
-## Recommendations
+Isolate Product Returns Leakage Insight ➔ Return quantities are currently distributed across disparate visual fields without a dedicated root-cause analyzer page.
 
-1. **Standardize naming conventions** across all tables, columns, and pages. Correct typos such as "Adjusted Prce," "DAte," and "Produt Overview" to improve readability and reduce confusion for future developers.
+* Action ➔ Build a localized Returns Analysis matrix to cross-reference product subcategory defects against regional distributor performance to reduce overhead margins.
 
-2. **Document all DAX measures** with inline comments or a measure description field, particularly for KPI title measures (orderkpi title, salekpi titles) and the dynamic selector parameters whose logic may not be self-evident.
+Cleanse Navigation and Reporting Layouts Insight ➔ The reporting structure relies on unmapped sheet layout names (e.g., "Page 1" and "Page 3") which hampers non-technical stakeholder use.
 
-3. **Add row-level security (RLS)** if the report is to be distributed to regional managers or external stakeholders, scoping their view to relevant territories or customer segments.
+* Action ➔ Standardize workspace tabs into descriptive, business-centric titles such as Category Performance Matrix or Executive Demographic Breakdown.
 
-4. **Consolidate Page 1 and Page 3** or clearly label them — currently both are named with generic identifiers ("Page 1," "Page 3") rather than descriptive titles, making navigation confusing for end users.
+Deploy Contextual Field Parameters Insight ➔ Static time-series analysis limits advanced comparison views between current actual values versus prior year baselines.
 
-5. **Implement incremental data refresh** if the underlying data source grows over time, to avoid full model refreshes that will become slower as transaction history accumulates.
-
-6. **Add a dedicated Returns Analysis page** that brings together return quantity, return rate by category, return rate by region, and trending over time, rather than distributing return metrics across multiple pages.
-
-7. **Version-control the `.pbix` file** using Power BI Projects format (`.pbip`) or by exporting the report definition to source-control-friendly JSON/TMDL files, enabling diff tracking and team collaboration on the data model.
+Action ➔ Build multi-layer DAX field parameter slicers to allow stakeholders to dynamically toggle raw charts between total volume, adjusted dollar adjustments, and prior month velocity.
