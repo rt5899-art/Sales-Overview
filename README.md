@@ -34,7 +34,7 @@ Geographic Visualization: Azure Maps API integration
 
 ### Strategic Recommendations
 
-Address Data Infrastructure Deficiencies Insight ➔ The foundational model shows iterative column and table spelling mismatches (such as missing characters in price variables and mixed case names like "DAte").
+Address Data Infrastructure Deficiencies Insight ➔ The foundational model shows iterative column and table spelling mismatches (such as missing characters in price variables and mixed case names like "Date").
 
 * Action ➔ Implement strict data cataloging rules and refactor table properties within Power Query to ensure system maintainability as the transactional pipeline grows.
 
