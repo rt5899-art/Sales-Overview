@@ -48,4 +48,4 @@ Cleanse Navigation and Reporting Layouts Insight ➔ The reporting structure rel
 
 Deploy Contextual Field Parameters Insight ➔ Static time-series analysis limits advanced comparison views between current actual values versus prior year baselines.
 
-Action ➔ Build multi-layer DAX field parameter slicers to allow stakeholders to dynamically toggle raw charts between total volume, adjusted dollar adjustments, and prior month velocity.
+* Action ➔ Build multi-layer DAX field parameter slicers to allow stakeholders to dynamically toggle raw charts between total volume, adjusted dollar adjustments, and prior month velocity.
