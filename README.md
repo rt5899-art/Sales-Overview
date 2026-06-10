@@ -1,4 +1,4 @@
-## Retail Sales Performance And Executive Overview 
+## Sales Performance And Executive Overview 
 
 An interactive, multi-page Power BI analytics dashboard designed to consolidate customer demographics, transaction logs, returns, and regional territories into an actionable business intelligence engine.
 
@@ -34,18 +34,7 @@ Geographic Visualization: Azure Maps API integration
 
 ### Strategic Recommendations
 
-Address Data Infrastructure Deficiencies Insight ➔ The foundational model shows iterative column and table spelling mismatches (such as missing characters in price variables and mixed case names like "Date").
-
-* Action ➔ Implement strict data cataloging rules and refactor table properties within Power Query to ensure system maintainability as the transactional pipeline grows.
-
-Isolate Product Returns Leakage Insight ➔ Return quantities are currently distributed across disparate visual fields without a dedicated root-cause analyzer page.
-
-* Action ➔ Build a localized Returns Analysis matrix to cross-reference product subcategory defects against regional distributor performance to reduce overhead margins.
-
-Cleanse Navigation and Reporting Layouts Insight ➔ The reporting structure relies on unmapped sheet layout names which hampers non-technical stakeholder use.
-
-* Action ➔ Standardize workspace tabs into descriptive, business-centric titles such as Category Performance Matrix or Executive Demographic Breakdown.
-
-Deploy Contextual Field Parameters Insight ➔ Static time-series analysis limits advanced comparison views between current actual values versus prior year baselines.
-
-* Action ➔ Build multi-layer DAX field parameter slicers to allow stakeholders to dynamically toggle raw charts between total volume, adjusted dollar adjustments, and prior month velocity.
+* **High Bike Return Metrics ➔ Quality & Fit Assessment** Analyze return data specifically within the Road and Mountain bike lines. Address whether sizing discrepancies or component issues are driving the **7.26%** return rate to minimize reverse logistics costs. 
+* **Income Segment Alignment ➔ Targeted Marketing Allocations** Prioritize high-income customer segments within North America and Europe for premium product launches, as they represent the core revenue engine for top-performing bike sub-categories.
+*  **June Order Deficit vs. Revenue Surplus ➔ Price-Elasticity Optimization** Leverage the dynamic Price Adjustment parameter to evaluate how shifting pricing models affect order velocity. June proved that fewer orders can generate massive revenue surpluses if the average order value (AOV) is successfully optimized.
+*  **Low-Performing Product Categories ➔ Inventory Consolidation** Assess sub-categories with negligible sales footprints (e.g., specific clothing items or low-margin accessories) to free up warehouse capacity and capital for high-velocity bike inventories. ---al volume, adjusted dollar adjustments, and prior month velocity.
