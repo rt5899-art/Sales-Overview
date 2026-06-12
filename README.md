@@ -42,8 +42,8 @@ Geographic Visualization: Azure Maps API integration
 * **Income Segment Alignment
     ➔ Targeted Marketing Allocations** Prioritize high-income customer segments within North America and Europe for premium product launches, as they represent the core revenue engine for top-performing bike sub-categories.
   
-  * **June Order Deficit vs. Revenue Surplus
- ➔ Price-Elasticity Optimization** Leverage the dynamic Price Adjustment parameter to evaluate how shifting pricing models affect order velocity. June proved that fewer orders can generate massive revenue surpluses if the average order value (AOV) is successfully optimized.
+* **June Order Deficit vs. Revenue Surplus
+  ➔ Price-Elasticity Optimization** Leverage the dynamic Price Adjustment parameter to evaluate how shifting pricing models affect order velocity. June proved that fewer orders can generate massive revenue surpluses if the average order value (AOV) is successfully optimized.
 
 *  **Low-Performing Product Categories
    ➔ Inventory Consolidation** Assess sub-categories with negligible sales footprints (e.g., specific clothing items or low-margin accessories) to free up warehouse capacity and capital for high-velocity bike inventories. ---al volume, adjusted dollar adjustments, and prior month velocity.
