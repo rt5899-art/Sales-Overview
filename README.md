@@ -39,7 +39,7 @@ Geographic Visualization: Azure Maps API integration
 * **High Bike Return Metrics
 ➔ Quality & Fit Assessment** Analyze return data specifically within the Road and Mountain bike lines. Address whether sizing discrepancies or component issues are driving the **7.26%** return rate to minimize reverse logistics costs.
 
- **Income Segment Alignment
+* **Income Segment Alignment
     ➔ Targeted Marketing Allocations** Prioritize high-income customer segments within North America and Europe for premium product launches, as they represent the core revenue engine for top-performing bike sub-categories.
   
   * **June Order Deficit vs. Revenue Surplus
