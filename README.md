@@ -8,6 +8,8 @@ This project transforms fragmented operational data spreadsheets into a unified,
 
 ### Tools & Technologies
 
+Platform : Microsoft Excel
+
 Data BI Platform: Microsoft Power BI Desktop
 
 Data Transformation: Power Query / M Language
@@ -34,7 +36,11 @@ Geographic Visualization: Azure Maps API integration
 
 ### Strategic Recommendations
 
-* **High Bike Return Metrics ➔ Quality & Fit Assessment** Analyze return data specifically within the Road and Mountain bike lines. Address whether sizing discrepancies or component issues are driving the **7.26%** return rate to minimize reverse logistics costs. 
-* **Income Segment Alignment ➔ Targeted Marketing Allocations** Prioritize high-income customer segments within North America and Europe for premium product launches, as they represent the core revenue engine for top-performing bike sub-categories.
-*  **June Order Deficit vs. Revenue Surplus ➔ Price-Elasticity Optimization** Leverage the dynamic Price Adjustment parameter to evaluate how shifting pricing models affect order velocity. June proved that fewer orders can generate massive revenue surpluses if the average order value (AOV) is successfully optimized.
-*  **Low-Performing Product Categories ➔ Inventory Consolidation** Assess sub-categories with negligible sales footprints (e.g., specific clothing items or low-margin accessories) to free up warehouse capacity and capital for high-velocity bike inventories. ---al volume, adjusted dollar adjustments, and prior month velocity.
+* **High Bike Return Metrics
+➔ Quality & Fit Assessment** Analyze return data specifically within the Road and Mountain bike lines. Address whether sizing discrepancies or component issues are driving the **7.26%** return rate to minimize reverse logistics costs.
+ **Income Segment Alignment
+   ➔ Targeted Marketing Allocations** Prioritize high-income customer segments within North America and Europe for premium product launches, as they represent the core revenue engine for top-performing bike sub-categories.
+  * **June Order Deficit vs. Revenue Surplus
+     ➔ Price-Elasticity Optimization** Leverage the dynamic Price Adjustment parameter to evaluate how shifting pricing models affect order velocity. June proved that fewer orders can generate massive revenue surpluses if the average order value (AOV) is successfully optimized.
+*  **Low-Performing Product Categories
+   ➔ Inventory Consolidation** Assess sub-categories with negligible sales footprints (e.g., specific clothing items or low-margin accessories) to free up warehouse capacity and capital for high-velocity bike inventories. ---al volume, adjusted dollar adjustments, and prior month velocity.
